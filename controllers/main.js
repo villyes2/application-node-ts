@@ -40,9 +40,37 @@ const deleteTableData = (req, res, db) => {
     .catch(err => res.status(400).json({dbError: 'db error'}))
 }
 
+const postUserData = (req, res, db) => {
+  const { username, password } = req.body
+ 
+  db('users').insert({username, password})
+    .returning('*')
+    .then(item => {
+      res.json(item)
+    })
+    .catch(err => res.status(400).json({dbError: 'db error'}))
+
+}
+
+const getUserData = (req, res, db) => {
+  db.select('*').from('users')
+    .then(items => {
+      if(items.length){
+        res.json(items)
+      } else {
+        res.json({dataExists: 'false'})
+      }
+    })
+    .catch(err => res.status(400).json({dbError: 'db error'}))
+
+}
+
 module.exports = {
   getTableData,
   postTableData,
   putTableData,
-  deleteTableData
+  deleteTableData,
+  getUserData,
+  postUserData
+
 }
