@@ -28,7 +28,7 @@ const main = require('./controllers/main')
 const app = express()
 
 // App Middleware
-const whitelist = ['http://localhost:4945']
+const whitelist = ['http://localhost:4995']
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1 || !origin) {
@@ -44,13 +44,14 @@ app.use(bodyParser.json())
 app.use(morgan('combined')) // use 'tiny' or 'combined'
 
 // App Routes - Auth
-app.get('/', (req, res) => res.send('hello world'))
+app.get('/', (req, res) => res.send('WELCOME TO IBM'))
 app.get('/crud', (req, res) => main.getTableData(req, res, db))
 app.post('/crud', (req, res) => main.postTableData(req, res, db))
 app.put('/crud', (req, res) => main.putTableData(req, res, db))
 app.delete('/crud', (req, res) => main.deleteTableData(req, res, db))
-
+app.get('/users', (req, res) => main.getUserData(req, res, db))
+app.post('/users', (req, res) => main.postUserData(req, res, db))
 // App Server Connection
-app.listen(process.env.PORT || 3000, () => {
-  console.log(`app is running on port ${process.env.PORT || 3000}`)
+app.listen(process.env.PORT || 81, () => {
+  console.log(`app is running on port ${process.env.PORT || 81}`)
 })
