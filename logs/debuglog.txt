@@ -1,0 +1,60 @@
+app is running on port 8118
+null
+users {
+  dataValues: {
+    id: 15,
+    username: 'someone',
+    email: 'newton_son@ymail.com',
+    password: '$2b$10$8OMoZCjiIsHu4qpHL51EZuHkCBRNkcqBDLQXTSSiNrEofAugpjsiK',
+    createdAt: '2020-08-22 14:32:51.402 +00:00',
+    updatedAt: '2020-08-22 14:32:51.402 +00:00'
+  },
+  _previousDataValues: {
+    id: 15,
+    username: 'someone',
+    email: 'newton_son@ymail.com',
+    password: '$2b$10$8OMoZCjiIsHu4qpHL51EZuHkCBRNkcqBDLQXTSSiNrEofAugpjsiK',
+    createdAt: '2020-08-22 14:32:51.402 +00:00',
+    updatedAt: '2020-08-22 14:32:51.402 +00:00'
+  },
+  _changed: Set {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [ 'id', 'username', 'email', 'password', 'createdAt', 'updatedAt' ]
+  },
+  isNewRecord: false
+}
+newton_son@ymail.com
+success return
+users {
+  dataValues: {
+    id: 15,
+    username: 'someone',
+    email: 'newton_son@ymail.com',
+    password: '$2b$10$8OMoZCjiIsHu4qpHL51EZuHkCBRNkcqBDLQXTSSiNrEofAugpjsiK',
+    createdAt: '2020-08-22 14:32:51.402 +00:00',
+    updatedAt: '2020-08-22 14:32:51.402 +00:00'
+  },
+  _previousDataValues: {
+    id: 15,
+    username: 'someone',
+    email: 'newton_son@ymail.com',
+    password: '$2b$10$8OMoZCjiIsHu4qpHL51EZuHkCBRNkcqBDLQXTSSiNrEofAugpjsiK',
+    createdAt: '2020-08-22 14:32:51.402 +00:00',
+    updatedAt: '2020-08-22 14:32:51.402 +00:00'
+  },
+  _changed: Set {},
+  _options: {
+    isNewRecord: false,
+    _schema: null,
+    _schemaDelimiter: '',
+    raw: true,
+    attributes: [ 'id', 'username', 'email', 'password', 'createdAt', 'updatedAt' ]
+  },
+  isNewRecord: false
+}
+newton_son@ymail.com
+Incorrect Password
