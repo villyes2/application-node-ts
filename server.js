@@ -110,7 +110,10 @@ console.log(jemail);
       }      
   });
 });
-
+var fs = require('fs');
+var util = require('util');
+var log_file = fs.createWriteStream(__dirname + '/logs/debuglog.txt', {flags : 'w'});
+var log_stdout = process.stdout;
 
 app.listen(process.env.PORT || 8118, () => {
   console.log(`app is running on port ${process.env.PORT || 8118}`)
