@@ -94,17 +94,19 @@ console.log(jemail);
       if (!user) {
         //if (jemail != email) {
          // res.redirect('http://localhost:4945/login');
-          res.status(401).json({message:'User Does Not Exist',error:error});
+          res.status(401).json({message:'User Does Not Exist',error});
       } else if (!user.validPassword(password)) {
         // res.redirect('http://localhost:4945/login');
          console.log("Incorrect Password")
-         res.status(401).json({message:'Incorrect Password',error:error});
+         res.status(401).json({message:'Incorrect Password',error});
       } else {
           req.user = user.dataValues;
+         
          // console.log(user)
          // res.redirect('http://localhost:4945/home');
           console.log("success return")
-          res.status(200).json({message:'success return',error:error});
+          res.status(200).json({message:'success return',user});
+          return user = user.dataValues;
       }      
   });
 });
